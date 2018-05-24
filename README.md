@@ -22,4 +22,4 @@ AssetsDetial用于记录每一件资产的信息，如id、类型、大小、颜
 
 4）维修时资产状态（AssetsStatus）为（IN_MAINTENANCE），根据这个状态值可查出哪些资产处于报修状态
 
-5）
+5）在维修时，AssetsStore中会记录维修数量（maintainNum)，如果AssetsStore中查询到某个批次中还有剩余的库存（store）>维修的数量，在AssetsDetail中找到对应批次资产状态为未分配的资产，分配给原先报修资产所分配的到的地方（distributeArea）。维修完成后在AssetsDetail中更新维修完成时间（maintainTime），并在AssetsStore中更新库存（store）和维修数量（maintainNum)
